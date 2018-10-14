@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="DTOObjs\EmailLoginValueDTO.cs" />
+    <Compile Remove="DTOObjs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerConnectorStandard\IServerConnectorStandard.csproj" />
+    <ProjectReference Include="..\ServerConnectorStandardLIB\ServerConnectorStandardLIB.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="DTOObjs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTOObjs\**" />
+  </ItemGroup>
+</Project>

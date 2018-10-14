@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170427-09" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServerConnectorStandardLIB\ServerConnectorStandardLIB.csproj" />
+    <ProjectReference Include="..\ServusEmail\ServusEmail.csproj" />
+    <ProjectReference Include="..\ServerConnectorStandard\IServerConnectorStandard.csproj" />
+    <ProjectReference Include="..\ServusFacebook\ServusFacebook.csproj" />
+    <ProjectReference Include="..\ServusProtobuf\ServusProtobuf.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="conf\emailLogin.json" />
+    <None Remove="conf\facebookLogin.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="conf\email\" />
+    <Folder Include="conf\single\" />
+    <Folder Include="conf\multi\" />
+    <Folder Include="conf\facebook\" />
+    <Folder Include="conf\localFlirt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="LocalFlirtTest.cs" />
+  </ItemGroup>
+</Project>

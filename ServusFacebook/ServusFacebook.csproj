@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="DTOObjs\GetPictureByIDDTO.cs" />
+    <Compile Remove="DTOObjs\**" />
+    <Compile Remove="PlayerUserdataMessageDTOFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerConnectorStandard\IServerConnectorStandard.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="DTOObjs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTOObjs\**" />
+  </ItemGroup>
+</Project>

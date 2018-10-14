@@ -1,0 +1,9 @@
+{
+  "DefaultPort": 1000,
+  "TimeoutInMs": 3000,
+  "ConnectRetryCount": 200,
+  "SendRetryCount": 1,
+  "RetryTimeoutInMs": 3000,
+  "EventTriggerTimerinMs": 1000,
+  "WithEventTimers": true
+}
